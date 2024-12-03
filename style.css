@@ -16,6 +16,7 @@ body {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   padding: 40px;
+  grid-column-gap: 100px;
 }
 .navbar-container {
   display: flex;
@@ -33,6 +34,7 @@ body {
   padding: 40px 0 0 40px;
   margin-top: 60px;
 }
+
 .showcase-container .showcase-text > h2:first-child {
   font-size: 3.25rem;
   font-weight: 700;
@@ -52,7 +54,7 @@ body {
 .hourly-forecast-container {
   padding: 40px;
   background: linear-gradient(90.28deg, #007dfe 0.22%, #3aa2ff 99.76%);
-  box-shadow: 0px 30px 50px 19px rgba(1, 126, 254, 0.5);
+  box-shadow: 0px 30px 50px -19px rgba(1, 126, 254, 0.5);
   border-radius: 40px;
   display: flex;
   align-items: center;
@@ -112,6 +114,58 @@ body {
 .weather-detail-container .weather-detail-item > div > img {
   width: 35px;
   height: 35px;
+}
+.weather-detail-container .weather-detail-item > div > p > span {
+  font-size: 0.75rem;
+  margin-left: -5px;
+  margin-bottom: auto;
+  margin-top: auto;
+}
+.weather-detail-container .weather-detail-item:hover {
+  transform: scale(1.11);
+  transition-duration: 0.5s;
+}
+
+/* Previsão semanal */
+.weekly-forecast-container {
+  background-color: #fff;
+  border-radius: 40px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.weekly-forecast-container .day-weather-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.weekly-forecast-container .day-weather-item > img {
+  width: 60px;
+  height: 60px;
+}
+.weekly-forecast-container .day-weather-item > p,
+.weekly-forecast-container .day-weather-item > div,
+.weekly-forecast-container .day-weather-item > img {
+  flex: 1;
+}
+.weekly-forecast-container .day-weather-item > p {
+  font-weight: 500;
+  color: #8f8f8f;
+}
+.weekly-forecast-container .day-weather-item > div {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.weekly-forecast-container .day-weather-item > div > p:first-child {
+  color: #2a394f;
+  font-weight: 500;
+  margin-right: 8px;
+}
+.weekly-forecast-container .day-weather-item > div > p:last-child {
+  color: #8f8f8f;
+  font-weight: 500;
 }
 
 /* Utilidades */
